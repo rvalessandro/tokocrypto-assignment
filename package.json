@@ -1,0 +1,20 @@
+{
+  "name": "tokocrypto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "one": "node ./_problems/one-fibonacci.js",
+    "two": "node ./_problems/two-arrayShifting.js",
+    "dev": "nodemon ./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "readline-sync": "^1.4.10"
+  }
+}
