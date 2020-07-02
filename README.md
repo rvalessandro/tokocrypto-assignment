@@ -1,5 +1,9 @@
 ## Prerequisites
 
+```
+git clone https://github.com/rvalessandro/tokocrypto-assignment.git
+```
+
 Modify /config/config.json and /config/config.env for database connection
 
 ## Installing
@@ -7,7 +11,6 @@ Modify /config/config.json and /config/config.env for database connection
 After modifying config, open terminal and copy the scripts below
 
 ```
-git clone https://github.com/rvalessandro/tokocrypto-assignment.git
 cd tokocrypto-assignment
 npm install
 npx sequelize db:create
