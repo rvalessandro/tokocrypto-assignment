@@ -72,7 +72,7 @@ exports.createTransaction = async (req, res, next) => {
             .send("Product not found or insufficient stock");
         }
 
-        totalPrice += productPrice;
+        totalPrice += productPrice * carts[i].quantity;
       } catch (error) {
         return res.status(400).send("Product not found or insufficient stock");
       }
