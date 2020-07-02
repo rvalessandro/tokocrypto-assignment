@@ -37,7 +37,7 @@ const Transaction = sequelize.define(
     }
   },
   {
-    tableName: "transactions"
+    tableName: "users"
   }
 );
 
