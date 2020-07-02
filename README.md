@@ -11,7 +11,6 @@ Modify /config/config.json and /config/config.env for database connection
 After modifying config, open terminal and copy the scripts below
 
 ```
-cd tokocrypto-assignment
 npm install
 npx sequelize db:create
 npx sequelize db:migrate
@@ -37,6 +36,10 @@ npm run two
 ```
 npm run dev
 ```
+
+## Endpoints
+
+https://documenter.getpostman.com/view/10059648/T17FAoHH?version=latest
 
 ## Built Using <a name = "built_using"></a>
 
