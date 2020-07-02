@@ -1,40 +1,33 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("carts", {
+    return queryInterface.createTable("transactions", {
       id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
         autoIncrement: false,
         primaryKey: true
       },
-      transaction_id: {
+      user_id: {
         type: Sequelize.UUID,
         allowNull: false,
         references: {
-          model: "transactions",
+          model: "users",
           key: "id"
         }
       },
-      product_id: {
-        type: Sequelize.UUID,
-        allowNull: false,
-        references: {
-          model: "products",
-          key: "id"
-        }
-      },
-      quantity: {
+      payment_amount: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
 
       // Timestamps
       createdAt: Sequelize.DATE,
-      updatedAt: Sequelize.DATE
+      updatedAt: Sequelize.DATE,
+      deletedAt: Sequelize.DATE
     });
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("carts");
+    return queryInterface.dropTable("transactions");
   }
 };

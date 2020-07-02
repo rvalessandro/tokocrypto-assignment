@@ -34,10 +34,15 @@ const Product = sequelize.define(
     updatedAt: {
       allowNull: false,
       type: Sequelize.DATE
+    },
+    deletedAt: {
+      allowNull: false,
+      type: Sequelize.DATE
     }
   },
   {
-    tableName: "products"
+    tableName: "products",
+    paranoid: true
   }
 );
 

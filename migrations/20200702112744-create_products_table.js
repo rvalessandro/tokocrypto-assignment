@@ -23,7 +23,8 @@ module.exports = {
 
       // Timestamps
       createdAt: Sequelize.DATE,
-      updatedAt: Sequelize.DATE
+      updatedAt: Sequelize.DATE,
+      deletedAt: Sequelize.DATE
     });
   },
 

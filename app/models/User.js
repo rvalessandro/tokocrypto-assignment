@@ -3,8 +3,8 @@
 const Sequelize = require("sequelize");
 const { v4: uuidv4 } = require("uuid");
 
-const Transaction = sequelize.define(
-  "Product",
+const User = sequelize.define(
+  "User",
   {
     id: {
       type: Sequelize.UUID,
@@ -41,8 +41,8 @@ const Transaction = sequelize.define(
   }
 );
 
-Transaction.beforeCreate((transaction) => {
-  transaction.id = uuidv4();
+User.beforeCreate((user) => {
+  user.id = uuidv4();
 });
 
-module.exports = Transaction;
+module.exports = User;

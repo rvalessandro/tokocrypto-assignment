@@ -3,6 +3,8 @@
 const Sequelize = require("sequelize");
 const { v4: uuidv4 } = require("uuid");
 
+const Product = require("./Product");
+
 const Cart = sequelize.define(
   "Cart",
   {
@@ -12,22 +14,17 @@ const Cart = sequelize.define(
       autoIncrement: false,
       primaryKey: true
     },
+    transactionId: {
+      field: "transaction_id",
+      type: Sequelize.UUID,
+      allowNull: false
+    },
     productId: {
       field: "product_id",
       type: Sequelize.UUID,
       allowNull: false
     },
-    userId: {
-      field: "user_id",
-      type: Sequelize.STRING,
-      allowNull: false
-    },
     quantity: {
-      type: Sequelize.INTEGER,
-      allowNull: false
-    },
-    grandTotal: {
-      field: "grand_total",
       type: Sequelize.INTEGER,
       allowNull: false
     },
@@ -44,6 +41,10 @@ const Cart = sequelize.define(
     tableName: "carts"
   }
 );
+
+Cart.belongsTo(Product, {
+  foreignKey: "productId"
+});
 
 Cart.beforeCreate((cart) => {
   cart.id = uuidv4();
