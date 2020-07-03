@@ -49,3 +49,9 @@ https://documenter.getpostman.com/view/10059648/T17FAoHH?version=latest
 ## Authors <a name = "authors"></a>
 
 - [@rvalessandro](https://github.com/rvalessandro)
+
+## Side note
+On production we would use best practices such as:
+1. OAuth 2.0 for authentication
+2. Pagination
+3. Adding payments table that stores payment information that relates to a specific transaction (Payment method, card number, etc.)
