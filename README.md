@@ -45,6 +45,7 @@ https://documenter.getpostman.com/view/10059648/T17FAoHH?version=latest
 
 - [Express](https://expressjs.com/) - Server Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
+- [MySQL](https://github.com/sidorares/node-mysql2) - Database
 
 ## Authors <a name = "authors"></a>
 
@@ -52,6 +53,6 @@ https://documenter.getpostman.com/view/10059648/T17FAoHH?version=latest
 
 ## Side note
 On production we would use best practices such as:
-1. OAuth 2.0 for authentication
+1. OAuth 2.0 & Passport for authentication and authorization (left out for simplicity in testing)
 2. Pagination
 3. Adding payments table that stores payment information that relates to a specific transaction (Payment method, card number, etc.)
